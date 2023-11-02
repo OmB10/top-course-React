@@ -3,7 +3,7 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 const Card = (props) => {
-    // console.log(props)
+
     const course = props.course;
     const likedCourses = props.likedCourses;
     const setLikedCourses = props.setLikedCourses;
@@ -14,17 +14,8 @@ const Card = (props) => {
             toast.warning("Liked Removed");
         }
         else {
-            // // Abhi tk 1 bhi course like nhi hua ha
-            // if(likedCourses.length === 0)
-            // {
-            //     setLikedCourses([course.id]);
-            // }
 
-            // // Kuch Courses Like ho gaye hai
-            // else{
-            //     setLikedCourses((prev) => [...prev,course.id]);
-            // }
-            setLikedCourses((prev) => [...prev,course.id]);
+            setLikedCourses((prev) => [...prev, course.id]);
             toast.success("Liked Successfully");
         }
     }

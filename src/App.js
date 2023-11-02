@@ -17,11 +17,9 @@ const App = () => {
     try {
       const response = await fetch(apiUrl);
       const output = await response.json();
-      // console.log(output.data);
       setCourses(output.data);
     }
     catch (err) {
-      // console.log(err);
       toast.error("Something Went Wrong");
     }
     setLoading(false)
